@@ -19,22 +19,37 @@ public class TestBase {
 	public WebDriver driver;
 	public ChromeOptions options;
 	public Properties prop;
+	public Properties testDataProp;
 	public FileInputStream ip;
-	
+	public FileInputStream iptestData;
+
 	public TestBase() {
-	 prop =new Properties();
-	 try {
-		ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\tutorialsninja\\qa\\config\\config.properties");
-	} catch (FileNotFoundException e) {
-	
-		e.printStackTrace();
-	}
-	 try {
-		prop.load(ip);
-	} catch (IOException e) {
-		
-		e.printStackTrace();
-	}
+		prop = new Properties();
+		try {
+			ip = new FileInputStream(System.getProperty("user.dir")
+					+ "\\src\\test\\java\\com\\tutorialsninja\\qa\\config\\config.properties");
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		try {
+			prop.load(ip);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		testDataProp = new Properties();
+		try {
+			iptestData = new FileInputStream(System.getProperty("user.dir")
+					+ "\\src\\test\\java\\com\\tutorialsninja\\qa\\testData\\testData.properties");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		try {
+			testDataProp.load(iptestData);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public WebDriver initializeBrowserAndOpenApplication(String browserName) {
@@ -50,13 +65,13 @@ public class TestBase {
 		} else if (browserName.equals("Edge")) {
 			driver = new EdgeDriver();
 		}
-	
+
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utils.IMPLICIT_WAIT));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utils.PAGELOAD_TIME));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(Utils.SCRIPTLOAD_TIME));
 		driver.get(prop.getProperty("url"));
-        return driver;
+		return driver;
 	}
 
 }

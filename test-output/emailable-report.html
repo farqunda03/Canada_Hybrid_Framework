@@ -8,11 +8,40 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">20,452</td><td></td><td></td></tr>
+<tr><th colspan="8">SearchProductSuite</th></tr>
+<tr><td><a href="#t0">SearchProductTest</a></td><td class="num">1</td><td class="num attn">1</td><td class="num attn">3</td><td class="num attn">1</td><td class="num">150,253</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.LoginTest</td><td><a href="#m0">loginWithValidCredentials</a></td><td rowspan="1">1686238140419</td><td rowspan="1">1138</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SearchProductSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SearchProductTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.SearchProductTest</td><td><a href="#m0">verifyInvalidProductSearch</a></td><td rowspan="1">1688818585858</td><td rowspan="1">664</td></tr><tr><th colspan="4">SearchProductTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.SearchProductTest</td><td><a href="#m1">VerifySearchWithNoProduct</a></td><td rowspan="1">1688818596036</td><td rowspan="1">0</td></tr><tr><th colspan="4">SearchProductTest &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="3">com.tutorialsninja.qa.testcases.SearchProductTest</td><td><a href="#m2">verifyInvalidProductSearch</a></td><td rowspan="3">1688818491607</td><td rowspan="3">643</td></tr><tr class="retriedeven"><td><a href="#m3">verifyInvalidProductSearch</a></td></tr><tr class="retriedeven"><td><a href="#m4">verifyInvalidProductSearch</a></td></tr><tr><th colspan="4">SearchProductTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.tutorialsninja.qa.testcases.SearchProductTest</td><td><a href="#m5">verifyValidProductSearch</a></td><td rowspan="1">1688818457993</td><td rowspan="1">938</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.tutorialsninja.qa.testcases.LoginTest#loginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SearchProductTest</h2><h3 id="m0">com.tutorialsninja.qa.testcases.SearchProductTest#verifyInvalidProductSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true],
+	expected [false] but found [true],
+	expected [false] but found [true],
+	expected [false] but found [true]
+	at com.tutorialsninja.qa.testcases.SearchProductTest.verifyInvalidProductSearch(SearchProductTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.tutorialsninja.qa.testcases.SearchProductTest#VerifySearchWithNoProduct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method SearchProductTest.VerifySearchWithNoProduct()[pri:3, instance:com.tutorialsninja.qa.testcases.SearchProductTest@6392827e] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.tutorialsninja.qa.testcases.SearchProductTest#verifyInvalidProductSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at com.tutorialsninja.qa.testcases.SearchProductTest.verifyInvalidProductSearch(SearchProductTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.tutorialsninja.qa.testcases.SearchProductTest#verifyInvalidProductSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true],
+	expected [false] but found [true],
+	expected [false] but found [true]
+	at com.tutorialsninja.qa.testcases.SearchProductTest.verifyInvalidProductSearch(SearchProductTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.tutorialsninja.qa.testcases.SearchProductTest#verifyInvalidProductSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true],
+	expected [false] but found [true]
+	at com.tutorialsninja.qa.testcases.SearchProductTest.verifyInvalidProductSearch(SearchProductTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.tutorialsninja.qa.testcases.SearchProductTest#verifyValidProductSearch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
